@@ -1,6 +1,6 @@
 const {Firestore} = require("@google-cloud/firestore");
 
-const db = new Firestore({projectId: process.env.GCLOUD_PROJECT});
+const db = new Firestore({projectId: process.env.GCLOUD_PROJECT, databaseId: "backend" });
 
 async function storeData(data) {
     // Membuat Collection root-level
