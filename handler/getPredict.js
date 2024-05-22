@@ -9,13 +9,13 @@ async function getPredict(request, h){
     const { label, suggestion } = await predict(image);
 
     const id = crypto.randomUUID();
-    const createAt = new Date().toISOString();
+    const createdAt = new Date().toISOString();
 
     const data = {
         id: id,
         result: label,
         suggestion: suggestion,
-        createAt: createAt,
+        createdAt: createdAt,
     }
 
     await storeData(data);
